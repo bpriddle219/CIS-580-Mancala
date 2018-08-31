@@ -1,0 +1,268 @@
+
+body {
+  background-color: silver;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+/* Using background from transparenttextures.com */
+}
+
+#board {
+  position: absolute;
+  top: 75px;
+  left: 470px;
+  width: 600px;
+  height: 600px;
+  border-radius: 300px;
+  border: 1px solid black;
+  background: burlywood;
+  background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+  /* Using background from transparenttextures.com */
+  box-shadow: 7px 7px 17px dimgray, -7px 7px 17px dimgray,
+              3px 3px 5px wheat inset, -3px -3px 5px wheat inset,
+              3px -3px 5px wheat inset, -3px 3px 5px wheat inset;
+}
+
+h1 {
+  color: lightgray;
+  font-size: 50px;
+  text-shadow: 7px 7px 7px dimgray;
+  position: absolute;
+  left: 360px;
+  font-family: "Verdana", "sans serif";
+}
+
+#reset {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 25px;
+  background: gainsboro;
+  top: 45px;
+  left: 950px;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: center;
+  line-height: 50px;
+  font-family: "Verdana", "sans serif";
+}
+
+#final {
+  position: absolute;
+  left: 240px;
+  top: 290px;
+  font-size: 30px;
+  font-family: "Verdana", "sans serif";
+}
+
+.turq {
+  background: mediumturquoise;
+}
+
+.pink {
+  background: lightsalmon;
+}
+
+.pink_score_box {
+  width: 200px;
+  height: 150px;
+  background: lightsalmon;
+  border: 5px solid darksalmon;
+  border-radius: 25px;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  left: 200px;
+  top: 300px;
+  font-family: "Verdana", "sans serif";
+}
+
+.turq_score_box {
+  width: 200px;
+  height: 150px;
+  background: mediumturquoise;
+  border: 5px solid darkturquoise;
+  border-radius: 25px;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  left: 1130px;
+  top: 300px;
+  font-family: "Verdana", "sans serif";
+}
+
+.pink_score {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Verdana", "sans serif";
+}
+
+.turq_score {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Verdana", "sans serif";
+}
+
+.score {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Verdana", "sans serif";
+}
+
+.pebble {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  border: 3px solid darkgreen;
+  background: yellowgreen;
+  top: 15px;
+  left: 6px;
+  float: left;
+}
+
+#ui {
+  position: absolute;
+  left: 680px;
+  top: 20px;
+  background-color: lightgray;
+  width: 200px;
+  font-size: 30px;
+  text-align: center;
+  box-shadow: 5px 5px 5px dimgray;
+  font-family: "Verdana", "sans serif";
+}
+
+#ui .block {
+	display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+	margin 0;
+}
+
+.bucket {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  border: 2px solid saddlebrown;
+}
+
+.scoring {
+  width: 200px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid saddlebrown;
+}
+
+.top {
+  background: mediumturquoise;
+  box-shadow: 7px 7px 17px darkturquoise inset, -7px -7px 17px darkturquoise inset,
+              7px -7px 17px darkturquoise inset, -7px 7px 17px darkturquoise inset;
+}
+
+.bottom {
+  background: lightsalmon;
+  box-shadow: 7px 7px 17px darksalmon inset, -7px -7px 17px darksalmon inset,
+              7px -7px 17px darksalmon inset, -7px 7px 17px darksalmon inset;
+}
+
+#scoring_bucket1 {
+  background: mediumturquoise;
+  box-shadow: 7px 7px 17px darkturquoise inset, -7px -7px 17px darkturquoise inset,
+              7px -7px1 7px darkturquoise inset, -7px 7px 17px darkturquoise inset;
+  position: absolute;
+  top: 250px;
+  right: 20px;
+}
+
+#bucket0 {
+  position: absolute;
+  left: 75px;
+  top: 120px;
+}
+#bucket1 {
+  position: absolute;
+  left: 190px;
+  top: 40px;
+}
+#bucket2 {
+  position: absolute;
+  left: 325px;
+  top: 40px;
+}
+#bucket3 {
+  position: absolute;
+  left: 440px;
+  top: 120px;
+}
+#bucket8 {
+  position: absolute;
+  left: 75px;
+  bottom: 120px;
+}
+#bucket7 {
+  position: absolute;
+  left: 190px;
+  bottom: 40px;
+}
+#bucket6 {
+  position: absolute;
+  left: 325px;
+  bottom: 40px;
+}
+#bucket5 {
+  position: absolute;
+  left: 440px;
+  bottom: 120px;
+}
+
+#scoring_bucket0 {
+  position: absolute;
+  top: 250px;
+  left: 30px;
+  background: lightsalmon;
+  box-shadow: 7px 7px 17px darksalmon inset, -7px -7px 17px darksalmon inset,
+              7px -7px 17px darksalmon inset, -7px 7px 17px darksalmon inset;
+}
+
+#s0 {
+  position: absolute;
+  left: 115px;
+  top: 95px;
+}
+#s1 {
+  position: absolute;
+  left: 230px;
+  top: 15px;
+}
+#s2 {
+  position: absolute;
+  left: 365px;
+  top: 15px;
+}
+#s3 {
+  position: absolute;
+  left: 480px;
+  top: 95px;
+}
+#s5 {
+  position: absolute;
+  left: 480px;
+  top: 362px;
+}
+#s6 {
+  position: absolute;
+  left: 365px;
+  top: 442px;
+}
+#s7 {
+  position: absolute;
+  left: 230px;
+  top: 442px;
+}
+#s8 {
+  position: absolute;
+  left: 115px;
+  top: 362px;
+}
