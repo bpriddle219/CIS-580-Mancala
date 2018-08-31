@@ -1,3 +1,12 @@
+/*
+ I figure I should explain what rules I'm playing mancala with. I played it a bunch
+ as a kid, apparently different to how everyone else plays it. The only rule outside
+ of only moving your own side of pebbles (which is not how I played as a kid) that I
+ implemented was if you land in your own scoring pit you get to go again. I never
+ did any capture rules or anything like that. Since you said to make it with whatever
+ house rules we wanted, this is what I made, as it's as close to how I remember it as
+ I can make it.
+*/
 const colors = ['turq', 'pink'];
 var turn = 0;
 var board = [
