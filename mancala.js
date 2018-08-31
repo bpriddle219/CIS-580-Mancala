@@ -7,7 +7,7 @@ var board = [
   [0]
 ];
 var scores = [0,0];
-var pebblesPerCup = 6;
+var pebblesPerCup = 4;
 
 /** @function displayTurn
 * Displays whose turn it is in a ui element
