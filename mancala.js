@@ -9,10 +9,18 @@ var board = [
 var scores = [0,0];
 var pebblesPerCup = 6;
 
+/** @function displayTurn
+* Displays whose turn it is in a ui element
+*/
 function displayTurn() {
 	displayMessage("It is <div class='" + colors[turn] + " block'></div>'s turn");
 }
 
+/** @function displayMessage
+* Displays a message in the ui element. Basically useless since only displayTurn
+* calls it, but I'm too lazy to change it
+* @param {string} message the message to be displayed
+*/
 function displayMessage(message) {
 	document.getElementById('ui').innerHTML = message;
 }
@@ -26,6 +34,11 @@ function displayMessage(message) {
 //   else animatePebble(pebble);
 // }
 
+/** @function displayPebble
+* Creates and adds the pebble to the proper bucket. Also increments the counts
+* of the buckets and the score.
+* @param {div} bucket the bucket the pebble is being placed in
+*/
 function displayPebble(bucket) {
 	var pebble = document.createElement('div');
 	pebble.classList.add("pebble");
@@ -63,6 +76,10 @@ function displayPebble(bucket) {
 
 }
 
+/** @function displayScore
+* Creates the score boxes and then displays the scores in addition to
+* the counts of each bucket.
+*/
 function displayScore() {
   if (document.getElementById('reset').innerHTML === "Start") {
     var pinkbox = document.createElement('div');
@@ -101,6 +118,10 @@ function displayScore() {
   }
 }
 
+/** @function checkForWin
+* Checks to see if there is a winner. If so, moves all pebbles to the appropriate
+* location and announces a winner.
+*/
 function checkForWin() {
   var flag = 0;
   var total = 0;
@@ -161,6 +182,10 @@ function checkForWin() {
   }
 }
 
+/** @function reset
+* Resets the board. Clears and redraws all pebbles, resets the turn, and clears
+* the score.
+*/
 function reset() {
   var pebbles = document.getElementsByClassName('pebble');
   while (pebbles[0] !== undefined || pebbles.length !== 0) {
@@ -187,6 +212,11 @@ function reset() {
   displayTurn();
 }
 
+/** @function move
+* Calculates the proper move for each pebble in the chosen bucket. Clears that
+* bucket and changes the turn if necessary.
+* @param {div} buc the bucket the pebbles are being moved from
+*/
 function move(buc) {
   var pebbles = document.getElementById('bucket'+ buc).children;
   if (pebbles === undefined || pebbles.length === 0) return;
@@ -228,12 +258,14 @@ function move(buc) {
   }
 }
 
+//Watches the button for a click event
 document.getElementById('reset')
   .addEventListener('click', function(event) {
     event.preventDefault();
     reset();
 });
 
+//Watches the appropriate buckets for click events
 for (var j = 0; j < 4; j++) {
   const buc = j;
   document.getElementById('bucket' + buc)
